@@ -5,6 +5,8 @@ import "@fontsource/poppins/700.css"
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './Pages/HomePage'
 import Navbar from './Components/CommonComponents/Navbar'
+import SignIn from './AuthPages/SignIn'
+import SignUp from './AuthPages/SignUp'
 
 function App() {
  
@@ -13,7 +15,13 @@ function App() {
     <>
      <Navbar/>
      <Routes>
+
+      <Route path='/sign-in' element={<SignIn/>}/>
+
+      <Route path='/sign-up' element={<SignUp/>}/>
+
       <Route path='/' element={<HomePage/>}/>
+
      </Routes>
     
      
